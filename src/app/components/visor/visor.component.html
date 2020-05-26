@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{perro.nombre}}</mat-card-title>
+   <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+  </mat-card-header>
+    <img mat-card-image [src]="perro.fotografia" alt="Foto de mi perro">
+  <mat-card-content>
+    <ul>
+      <li>Nombre: {{perro.nombre}}</li>
+      <li>Fecha de nacimiento: {{perro.fechaNacimiento}}</li>
+      <li>Sexo: {{perro.sexo}}</li>
+    </ul>
+    <h3>Descripcion:</h3>
+    <p>{{perro.descripcion}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+        <!-- VACIO -->
+  </mat-card-actions>
+</mat-card>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Perro } from './models/perro.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public perro: Perro = new Perro();
   title = 'angularServices';
 }
