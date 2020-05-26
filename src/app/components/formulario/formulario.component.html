@@ -8,26 +8,26 @@
     <div class="example-container">
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Nombre</mat-label>
-        <input matInput placeholder="Ingresa el nombre de tu mascota" [(ngModel)]="perro.nombre">
+        <input matInput placeholder="Ingresa el nombre de tu mascota" [(ngModel)]="svc.perro.nombre">
       </mat-form-field>
       <br>
       <mat-form-field class="full-width">
         <mat-label>Fecha de nacimiento</mat-label>
-        <input matInput [matDatepicker]="picker" [(ngModel)]="perro.fechaNacimiento">
+        <input matInput [matDatepicker]="picker" [(ngModel)]="svc.perro.fechaNacimiento">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
       <br>
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Select</mat-label>
-        <mat-select [(ngModel)]="perro.sexo">
+        <mat-select [(ngModel)]="svc.perro.sexo">
           <mat-option *ngFor="let sexo of sexos" [value]="sexo">{{sexo}}</mat-option>
         </mat-select>
       </mat-form-field>
       <br>
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Caracteristicas de mi mascota</mat-label>
-        <textarea matInput placeholder="Ej. Mi mascota se porta muy mal cuando llueve porque le da miedo" [(ngModel)]="perro.descripcion"></textarea>
+        <textarea matInput placeholder="Ej. Mi mascota se porta muy mal cuando llueve porque le da miedo" [(ngModel)]="svc.perro.descripcion"></textarea>
       </mat-form-field>
       <br>
       <div appearance="fill" class="full-width">

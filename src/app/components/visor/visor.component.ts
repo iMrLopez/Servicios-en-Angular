@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { PrincipalService } from 'src/app/services/principal.service';
 
 @Component({
   selector: 'app-visor',
@@ -7,8 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class VisorComponent implements OnInit {
 
-  @Input() public perro;
-  constructor() { }
+  constructor(public svc: PrincipalService) { }
 
   ngOnInit() {
   }

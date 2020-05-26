@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Perro } from 'src/app/models/perro.model';
+import { PrincipalService } from 'src/app/services/principal.service';
 
 @Component({
   selector: 'app-formulario',
@@ -8,8 +8,7 @@ import { Perro } from 'src/app/models/perro.model';
 })
 export class FormularioComponent implements OnInit {
   public sexos = ['Macho', 'Hembra'];
-  @Input() public perro;
-  constructor() { }
+  constructor(public svc: PrincipalService) { }
 
   ngOnInit() { }
 
@@ -21,7 +20,7 @@ export class FormularioComponent implements OnInit {
     if ($event.target.files) {
       const lector = new FileReader();
       lector.onload = () => {
-        this.perro.fotografia = lector.result;
+        this.svc.perro.fotografia = lector.result;
       };
       lector.readAsDataURL($event.target.files[0]); // convert to base64 string
     }

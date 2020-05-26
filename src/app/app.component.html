@@ -1,11 +1,9 @@
-<mat-grid-list cols="2" rowHeight="2:1" style="background: lightblue">
+<mat-grid-list cols="2" rowHeight="1:1" style="background: lightblue">
   <mat-grid-tile>
-    <app-formulario [perro]="perro"></app-formulario>
+    <app-formulario></app-formulario>
   </mat-grid-tile>
   <mat-grid-tile>
-    <app-visor [perro]="perro"></app-visor>
+    <app-visor></app-visor>
   </mat-grid-tile>
-<mat-grid-tile [colspan]="2" style="text-align: center;">
-  <app-tiempo-actual [perro]="perro"></app-tiempo-actual>
-</mat-grid-tile>
 </mat-grid-list>
+<app-tiempo-actual></app-tiempo-actual>

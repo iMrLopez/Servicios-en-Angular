@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Perro } from 'src/app/models/perro.model';
+import { PrincipalService } from 'src/app/services/principal.service';
 
 @Component({
   selector: 'app-tiempo-actual',
@@ -8,9 +8,8 @@ import { Perro } from 'src/app/models/perro.model';
 })
 export class TiempoActualComponent implements OnInit {
   public currentDate = new Date();
-  @Input() perro: Perro;
 
-  constructor() { }
+  constructor(public svc: PrincipalService) { }
 
   ngOnInit() {
     setInterval(() => {
