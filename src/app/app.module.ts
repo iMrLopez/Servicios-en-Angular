@@ -14,12 +14,14 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { VisorComponent } from './components/visor/visor.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
+import { TiempoActualComponent } from './components/tiempo-actual/tiempo-actual.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    VisorComponent
+    VisorComponent,
+    TiempoActualComponent
   ],
   imports: [
     BrowserModule,
