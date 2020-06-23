@@ -7,6 +7,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,13 +18,15 @@ import { VisorComponent } from './components/visor/visor.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { TiempoActualComponent } from './components/tiempo-actual/tiempo-actual.component';
+import { ListaDePerrosComponent } from './components/lista-de-perros/lista-de-perros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
     VisorComponent,
-    TiempoActualComponent
+    TiempoActualComponent,
+    ListaDePerrosComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,10 @@ import { TiempoActualComponent } from './components/tiempo-actual/tiempo-actual.
     MatSelectModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     MatDatepickerModule

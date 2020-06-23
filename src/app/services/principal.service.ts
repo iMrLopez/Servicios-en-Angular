@@ -6,7 +6,24 @@ import { Perro } from '../models/perro.model';
 })
 export class PrincipalService {
   public perro: Perro;
+  public perros: Perro[];
+
   constructor() {
     this.perro = new Perro();
+    this.perros = [];
   }
+
+  getPerros() {
+
+  }
+
+  postPerro(perro: Perro) {
+    this.perros.push(perro);
+  }
+
+  putPerro() {
+
+  }
+
+
 }

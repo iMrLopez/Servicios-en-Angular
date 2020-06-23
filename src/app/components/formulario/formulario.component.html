@@ -8,35 +8,35 @@
     <div class="example-container">
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Nombre</mat-label>
-        <input matInput placeholder="Ingresa el nombre de tu mascota" [(ngModel)]="svc.perro.nombre">
+        <input matInput placeholder="Ingresa el nombre de tu mascota" [(ngModel)]="perro.nombre">
       </mat-form-field>
       <br>
       <mat-form-field class="full-width">
         <mat-label>Fecha de nacimiento</mat-label>
-        <input matInput [matDatepicker]="picker" [(ngModel)]="svc.perro.fechaNacimiento">
+        <input matInput [matDatepicker]="picker" [(ngModel)]="perro.fechaNacimiento">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
       <br>
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Select</mat-label>
-        <mat-select [(ngModel)]="svc.perro.sexo">
+        <mat-select [(ngModel)]="perro.sexo">
           <mat-option *ngFor="let sexo of sexos" [value]="sexo">{{sexo}}</mat-option>
         </mat-select>
       </mat-form-field>
       <br>
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Caracteristicas de mi mascota</mat-label>
-        <textarea matInput placeholder="Ej. Mi mascota se porta muy mal cuando llueve porque le da miedo" [(ngModel)]="svc.perro.descripcion"></textarea>
+        <textarea matInput placeholder="Ej. Mi mascota se porta muy mal cuando llueve porque le da miedo" [(ngModel)]="perro.descripcion"></textarea>
       </mat-form-field>
       <br>
       <div appearance="fill" class="full-width">
-        <button mat-raised-button (click)="openInput()">Seleccionar una fotografia</button>
+        <button mat-raised-button (click)="openInput()" color="accent">Seleccionar una fotografia</button>
         <input id="fotoInput" hidden type="file" (change)="fotoSeleccionada($event)" name="file" accept="image/*">
       </div>
     </div>
   </mat-card-content>
   <mat-card-actions>
-    <!-- VACIO -->
+    <button mat-raised-button color="primary" (click)="saveDog()">Primary</button>
   </mat-card-actions>
 </mat-card>
