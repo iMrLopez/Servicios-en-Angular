@@ -6,7 +6,7 @@
     <app-formulario></app-formulario>
   </mat-grid-tile>
   <mat-grid-tile>
-    <app-visor></app-visor>
+    <app-visor *ngIf="svc.perro"></app-visor>
   </mat-grid-tile>
 </mat-grid-list>
 <app-tiempo-actual></app-tiempo-actual>

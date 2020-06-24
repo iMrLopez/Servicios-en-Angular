@@ -12,10 +12,19 @@ export class ListaDePerrosComponent implements OnInit {
   constructor(public principalSvc: PrincipalService) { }
 
   ngOnInit() {
+    this.loadPerros();
   }
 
   selectPerro(perro: Perro) {
     this.principalSvc.perro = perro;
+  }
+
+  loadPerros(): void {
+    this.principalSvc.getPerros().subscribe((perros) => {
+      console.log(perros);
+      // tslint:disable-next-line: no-string-literal
+      this.principalSvc.perros = perros['perros'] as Perro[];
+    });
   }
 
 }
